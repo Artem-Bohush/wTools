@@ -639,7 +639,7 @@ function _err( o )
           catch( err )
           {
             debugger;
-            arg = o.args[ a ] = '!ERROR PROCESSING ERROR!'
+            arg = o.args[ a ] = '!ERROR IN ERROR FORMATTER!'
             console.log( String( err ) );
           }
         }
@@ -1300,7 +1300,7 @@ function errRestack( err, level )
   let err2 = _._err
   ({
     args : [],
-    levle : level + 1,
+    level : level + 1,
   });
 
   return _.err( err2, err );

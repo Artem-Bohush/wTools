@@ -3680,7 +3680,7 @@ function entityMap( src, onEach )
     for( let s = 0 ; s < src.length ; s++ )
     {
       result[ s ] = onEach( src[ s ], s, src );
-      _.assert( result[ s ] !== undefined, '{-entityMap-} onEach should return defined values, to been able return undefined to delete element use ( entityFilter )' )
+      _.assert( result[ s ] !== undefined, '{-entityMap-} onEach should return defined values, to been able to return undefined to delete element use ( entityFilter )' )
     }
   }
   // else if( _.objectLike( src ) )
@@ -3690,13 +3690,13 @@ function entityMap( src, onEach )
     for( let s in src )
     {
       result[ s ] = onEach( src[ s ], s, src );
-      _.assert( result[ s ] !== undefined, '{-entityMap-} onEach should return defined values, to been able return undefined to delete element use ( entityFilter )' )
+      _.assert( result[ s ] !== undefined, '{-entityMap-} onEach should return defined values, to been able to return undefined to delete element use ( entityFilter )' )
     }
   }
   else
   {
     result = onEach( src, undefined, undefined );
-    _.assert( result !== undefined, '{-entityMap-} onEach should return defined values, to been able return undefined to delete element use ( entityFilter )' )
+    _.assert( result !== undefined, '{-entityMap-} onEach should return defined values, to been able to return undefined to delete element use ( entityFilter )' )
 
   }
 
@@ -3731,7 +3731,7 @@ function entityMap_( dst, src, onEach )
       for( let s = 0 ; s < src.length ; s++ )
       {
         result[ s ] = onEach( src[ s ], s, src );
-        _.assert( result[ s ] !== undefined, '{-entityMap-} onEach should return defined values, to been able return undefined to delete element use ( entityFilter )' )
+        _.assert( result[ s ] !== undefined, '{-entityMap-} onEach should return defined values, to been able to return undefined to delete element use ( entityFilter )' )
       }
     }
     else if( _.mapLike( src ) )
@@ -3739,13 +3739,13 @@ function entityMap_( dst, src, onEach )
       for( let s in src )
       {
         result[ s ] = onEach( src[ s ], s, src );
-        _.assert( result[ s ] !== undefined, '{-entityMap-} onEach should return defined values, to been able return undefined to delete element use ( entityFilter )' )
+        _.assert( result[ s ] !== undefined, '{-entityMap-} onEach should return defined values, to been able to return undefined to delete element use ( entityFilter )' )
       }
     }
     else
     {
       result = onEach( src, undefined, undefined );
-      _.assert( result !== undefined, '{-entityMap-} onEach should return defined values, to been able return undefined to delete element use ( entityFilter )' )
+      _.assert( result !== undefined, '{-entityMap-} onEach should return defined values, to been able to return undefined to delete element use ( entityFilter )' )
     }
 
   }
@@ -3763,7 +3763,7 @@ function entityMap_( dst, src, onEach )
       for( let s = 0 ; s < src.length ; s++ )
       {
         result[ s ] = onEach( src[ s ], s, src );
-        _.assert( result[ s ] !== undefined, '{-entityMap-} onEach should return defined values, to been able return undefined to delete element use ( entityFilter )' )
+        _.assert( result[ s ] !== undefined, '{-entityMap-} onEach should return defined values, to been able to return undefined to delete element use ( entityFilter )' )
       }
     }
     else if( _.mapLike( src ) )
@@ -3776,13 +3776,13 @@ function entityMap_( dst, src, onEach )
       for( let s in src )
       {
         result[ s ] = onEach( src[ s ], s, src );
-        _.assert( result[ s ] !== undefined, '{-entityMap-} onEach should return defined values, to been able return undefined to delete element use ( entityFilter )' )
+        _.assert( result[ s ] !== undefined, '{-entityMap-} onEach should return defined values, to been able to return undefined to delete element use ( entityFilter )' )
       }
     }
     else
     {
       result = onEach( src, undefined, undefined );
-      _.assert( result !== undefined, '{-entityMap-} onEach should return defined values, to been able return undefined to delete element use ( entityFilter )' )
+      _.assert( result !== undefined, '{-entityMap-} onEach should return defined values, to been able to return undefined to delete element use ( entityFilter )' )
 
       if( _.longIs( dst ) )
       result = _.arrayAppendElement( dst, result );
@@ -3814,7 +3814,7 @@ function entityFilter( src, onEach )
   _.assert( arguments.length === 2 );
   // _.assert( _.objectLike( src ) || _.longIs( src ), () => 'Expects objectLike or longIs src, but got ' + _.strType( src ) );
   _.assert( _.routineIs( onEach ) );
-  _.assert( src !== undefined, 'Expects src' );
+  // _.assert( src !== undefined, 'Expects src' ); /* qqq2 : ! */
 
   /* */
 
@@ -3883,7 +3883,7 @@ function entityFilter_( dst, src, onEach )
   onEach = _._filter_functor( onEach, 1 );
 
   _.assert( _.routineIs( onEach ) );
-  _.assert( src !== undefined, 'Expects src' );
+  // _.assert( src !== undefined, 'Expects src' ); qqq2 : !
 
   /* */
 
@@ -3996,7 +3996,7 @@ function entityFirst( src, onEach )
 
   _.assert( arguments.length === 2 );
   _.assert( _.routineIs( onEach ) );
-  _.assert( src !== undefined, 'Expects src' );
+  // _.assert( src !== undefined, 'Expects src' ); /* qqq2 : ! */
 
   /* */
 
@@ -4044,7 +4044,7 @@ function entityLast( src, onEach )
 
   _.assert( arguments.length === 2 );
   _.assert( _.routineIs( onEach ) );
-  _.assert( src !== undefined, 'Expects src' );
+  // _.assert( src !== undefined, 'Expects src' );
 
   /* */
 

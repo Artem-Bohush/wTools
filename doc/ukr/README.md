@@ -15,6 +15,36 @@
 </details>
 
 <details>
+  <summary><a href="./concept/RoutineInput.md#мапа-дефолтних-значень">
+    Мапа дефолтних значень
+  </a></summary>
+    Це мапа, яка містить у собі опції, що визначають поведінку рутини за замовчуванням. 
+</details>
+
+<details>
+  <summary><a href="./concept/Vectorization.md#векторизація">
+    Векторизація
+  </a></summary>
+    Векторизація - це процес перетворення алгоритму від операцій над одним значенням за раз, до операцій над набором
+    значень(<a href="./concept/Vector.md#вектор">вектором</a>) за один раз.
+</details>
+
+<details>
+  <summary><a href="./concept/Vectorization.md#автоматична-векторизація">
+    Автоматична векторизація
+  </a></summary>
+  Векторизацію можливо виконати за допомогою рутини <a href="./tutorial/Vectorize.md">vectorize</a>.
+</details>
+
+<details>
+  <summary><a href="./concept/Vectorization.md#ручна-векторизація">
+    Ручна векторизація
+  </a></summary>
+  Операції над даними можуть бути складними і не піддаватись автоматичній векторизації або робити її недоцільною.
+  В такому разі можливо векторизувати рутини вручну.
+</details>
+
+<details>
   <summary><a href="./concept/Vector.md">
     Вектор
   </a></summary>
@@ -25,14 +55,18 @@
   <summary><a href="./concept/Evaluator.md">
     Евалуатор
   </a></summary>
-    Це одна або дві функції, які дозволяють довільним чином перетворити елементи масиву перед їх порівнянням. Якщо отримані значення співпадають евалуатор повертає <code>true</code>, інакше - <code>false</code>. Евалуатор, в якості колбека, передається в рутини роботи із масивами.
+    Це рутина або пара рутин, які дозволяють довільним чином перетворити елементи масиву перед їх порівнянням. 
+    Якщо отримані значення співпадають евалуатор повертає <code>true</code>, інакше - <code>false</code>. 
+    Евалуатор, в якості колбека, передається в рутини для роботи із <a href="./concept/Long.md">Long</a> типами.
 </details>
 
 <details>
   <summary><a href="./concept/Equalizer.md">
     Еквалайзер
   </a></summary>
-    Це функція, котра порівнюючи два елементи масиву повертає <code>true</code> у випадку, якщо умова порівняння виконується, інакше - <code>false</code>. Еквалайзер, в якості колбека, передається в рутини роботи із масивами.
+    Це функція, котра порівнюючи два елементи масиву повертає <code>true</code> у випадку, якщо умова порівняння виконується, 
+    інакше - <code>false</code>. Еквалайзер, в якості колбека, передається в рутини для роботи із
+    <a href="./concept/Long.md">Long</a> типами.
 </details>
 
 <details>
@@ -43,24 +77,31 @@
 </details>
 
 <details>
-  <summary><a href="./concept/TypePrimitive.md#Тип-string">
+  <summary><a href="./concept/TypePrimitive.md#тип-string">
     Тип <code>string</code>
   </a></summary>
     Примітивний тип даних для представлення текстових даних.
 </details>
 
 <details>
-  <summary><a href="./concept/TypeIndexed.md">
-    Впорядковані типи даних
+  <summary><a href="./concept/Long.md">
+    Тип <code>Long</code>
   </a></summary>
     Комплексні типи даних, що містять множину елементів котрі ідентифікуються за індексом.
 </details>
 
 <details>
-  <summary><a href="./concept/TypeUnroll.md">
+  <summary><a href="./concept/Long.md#Дескриптор-типу-Long">
+    Дескриптор типу <code>long</code>
+  </a></summary>
+    Дескриптор, що визначає тип контейнеру при створенні лонгу, якщо тип не вказано явно.
+</details>
+
+<details>
+  <summary><a href="./concept/TypeUnroll.md#тип-unroll">
     Тип <code>unroll</code>
   </a></summary>
-    <code>Unroll</code> - тип даних - особливий вид масиву, здатний розготатись в іншому масиві при виконанні операції над ним.
+    Тип даних <code>unroll</code> - особливий вид масиву, здатний розгортатись в іншому масиві при виконанні операції над останнім.
 </details>
 
 <details>
@@ -106,10 +147,10 @@
 </details>
 
 <details>
-  <summary><a href="./concept/LongDescriptor.md">
-    Дескриптор типу <code>long</code>
+  <summary><a href="./concept/Stream.md">
+    Тип <code>Stream</code>
   </a></summary>
-    Дескриптор, що визначає тип контейнеру при створенні лонгу, якщо тип не вказано явно.
+    <code>Stream</code> - абстрактний інтерфейс для роботи з потоковими даними.
 </details>
 
 ## Туторіали
@@ -132,37 +173,37 @@
 
 <details>
   <summary><a href="./tutorial/ConventionNamingInArray.md">
-    Array routines call conventions: naming
+    Конвенції рутин _.array*: найменування рутин
   </a></summary>
     Принципи найменування рутин сімейства <code>Array</code>.
 </details>
 
 <details>
-  <summary><a href="./tutorial/ConventionCallbecksInArray.md">
-    Array routines call conventions: callbacks
+  <summary><a href="./tutorial/ConventionCallbacksInArray.md">
+    Конвенції рутин _.array*: callbacks
   </a></summary>
     Як використовувати <code>callback</code>-и в рутинах сімейства <code>Array</code>.
 </details>
 
 <details>
   <summary><a href="./tutorial/ConventionDstArgInArray.md">
-    Array routines call conventions: dst argument
+    Конвенції рутин _.array*: аргумент dst
   </a></summary>
-    Про що свідчить використання аргумента <code>dst</code>.
+    Про що свідчить використання аргументів <code>dst</code> і <code>src</code>.
+</details>
+
+<details>
+  <summary><a href="./tutorial/ConventionDstNull.md">
+    Конвенції: dst=null
+  </a></summary>
+    Для чого передається <code>null</code> в параметр <code>dst</code>.
 </details>
 
 <details>
   <summary><a href="./tutorial/ConventionDefaultsMapInRoutine.md">
-    Routines call convention: routine defaults map
+    Конвенції: мапа дефолтних значень
   </a></summary>
-    Як зберігаються та змінюються налаштування за замовчуванням в рутинах.
-</details>
-
-<details>
-  <summary><a href="./tutorial/ConventionDstNullNew.md">
-    Call conventions: dst - null
-  </a></summary>
-    Передача значення <code>null</code> в параметр <code>dst</code>.
+    Як зберігаються та змінюються налаштування в рутинах.
 </details>
 
 <details>
@@ -176,7 +217,7 @@
   <summary><a href="./tutorial/TimeMeasurement.md">
     Як заміряти час
   </a></summary>
-    Замір часу виконання алгоритмів для вибору оптимального рішення.
+    Вимірювання часу виконання алгоритмів для вибору оптимального рішення.
 </details>
 
 <details>
@@ -204,7 +245,7 @@
   <summary><a href="./tutorial/Vectorize.md">
     Векторизація рутин
   </a></summary>
-    Як використовувати рутину <code>vectorize</code> для векторизації скалярних рутин.
+    Використання рутини <code>vectorize</code> для векторизації скалярних рутин.
 </details>
 
 <details>
@@ -212,4 +253,11 @@
     Налаштування рутин при векторизації
   </a></summary>
     Як використовувати опції рутини <code>vectorize</code> при створенні векторизованої рутини.
+</details>
+
+<details>
+  <summary><a href="./tutorial/Ofication.md">
+    Офікація рутини
+  </a></summary>
+    Офікація рутини - перетворення рутини, котра очікує масив аргументів в таку рутину, яка очікує мапу опцій <code>о</code>.
 </details>

@@ -1,7 +1,7 @@
 {
   "name" : "wTools",
-  "version" : "0.8.638",
-  "engine" : "node >= 8.0.0",
+  "version" : "0.8.660",
+  "engine" : "node >= 10.0.0",
   "enabled" : 1,
   "description" : "Collection of general purpose tools for solving problems. Fundamentally extend JavaScript without spoiling namespace, so may be used solely or in conjunction with another module of such kind",
   "license" : "MIT",
@@ -26,7 +26,7 @@
     "proto/dwtools/abase/Layer2.s",
     "out"
   ],
-  "scripts" : { "test" : "wtest .run proto/**", "docgen" : "wdocgen proto" },
+  "scripts" : { "test" : "wtest .run \"proto/**\"", "docgen" : "wdocgen proto" },
   "repository" : { "type" : "git", "url" : "https://github.com/Wandalen/wTools.git" },
   "bugs" :
   {
@@ -39,7 +39,9 @@
     "wcloner" : "",
     "wselector" : "",
     "wstringer" : "",
-    "wTesting" : ""
+    "wTesting" : "",
+    "wTools" : "file:.",
+    "eslint" : "7.1.0"
   },
   "keywords" :
   [
